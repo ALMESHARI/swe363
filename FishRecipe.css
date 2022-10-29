@@ -1,0 +1,296 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+        background-image: url('silverware.jpg');
+}
+
+.container {
+        max-width: 1024px;
+        margin: 0px auto;
+        padding-bottom: 20px;
+        padding: 20px;
+}
+
+h1 {
+        border: solid #73ad21;
+        border-radius: 24px;
+        max-width: 700px;
+        padding: 15px;
+        margin: 30px auto;
+        width: 90%;
+        font-size: 1.1em;
+        display: flex;
+        justify-content: center;
+        color: #a4a400;
+        background-color: #f0f0f0;
+}
+
+.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 320px);
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
+        position: relative;
+}
+
+.grid-ingredients {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 320px);
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 30px;
+        position: relative;
+}
+
+img {
+        min-height: 180px;
+        width: 300px;
+        border-radius: 50%;
+        margin: 0 auto;
+}
+
+/* design the main page */
+#main-topic {
+        font-size: 30px;
+}
+
+section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+section h1 {
+        width: 400px;
+        border-radius: 24px;
+        max-width: 80%;
+}
+
+ul li {
+        list-style-image: url('fish_icon_24.png');
+        margin-left: 30px;
+}
+
+ul {
+        column-gap: 70px;
+}
+
+hr {
+        margin-top: 20px;
+        border-top: solid 2px #bbb;
+}
+
+.method-section ol {
+        column-gap: 65px;
+        position: relative;
+        margin-left: 14px;
+}
+
+/* index */
+
+.grid-index {
+        width: 100%;
+        column-count: 1;
+        column-gap: 20px;
+        column-rule-style: solid;
+        column-rule-color: #a4a400;
+
+}
+
+.grid-index img,
+a {
+        display: block;
+        margin: 20px auto;
+}
+
+
+@media (min-width:650px) {
+        .grid-ingredients {
+                grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-index {
+                column-count: 2;
+        }
+
+        .method-section ol {
+                column-count: 2;
+        }
+
+        .method-section ol::after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #a4a400;
+                left: 48%;
+                top: 0%;
+                position: absolute;
+        }
+
+        .grid-ingredients ul {
+                column-count: 1;
+                margin-left: 10px;
+        }
+
+        .grid:nth-child(2):after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #a4a400;
+                left: 50%;
+                top: 0%;
+                position: absolute;
+        }
+
+        .grid-ingredients:nth-child(2):after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #a4a400;
+                left: 49%;
+                top: 0%;
+                position: absolute;
+        }
+
+}
+
+@media (min-width:980px) {
+        .grid-ingredients {
+                grid-template-columns: 1fr 2fr;
+        }
+
+        .grid-ingredients ul {
+                column-count: 2;
+        }
+
+        .grid-index {
+                column-count: 3;
+        }
+
+        .method-section ol {
+                column-count: 3;
+        }
+
+        .method-section ol::after {
+                left: 31%;
+        }
+
+        .method-section ol::before {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #a4a400;
+                right: 32%;
+                top: 0%;
+                position: absolute;
+        }
+
+        .grid:nth-child(2):after {
+                left: 335px;
+        }
+
+        .grid:nth-child(2):before {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #a4a400;
+                right: 33px;
+                top: 0%;
+                position: absolute;
+        }
+
+        .grid-ingredients:nth-child(2):after {
+                left: 32%;
+        }
+
+        .grid-ingredients:nth-child(2):before {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #a4a400;
+                right: 32%;
+                top: 0%;
+                position: absolute;
+        }
+
+}
+
+/* user comments section */
+.user-comments-section {
+        width: 340px;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+
+}
+
+.user-comments-section fieldset {
+        width: 340px;
+        padding: 10px;
+}
+
+.user-comments-section input,
+textarea {
+        width: 100%;
+}
+
+textarea {
+        height: 90px;
+        font-size: 15px;
+}
+
+#plus-sign {
+        width: 80px;
+
+}
+
+.user-comments-section * {
+        margin-right: auto;
+}
+
+.user-comments-section>p {
+        width: 100%;
+        background-color: #ffff8a;
+        margin-top: 10px;
+        height: 50px;
+        font-size: 15px;
+}
+
+.sign-up-section .personal-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        width: 300px;
+        height: 150px;
+        padding: 10px;
+}
+
+.sign-up-section #recipes-field {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+}
+
+.sign-up-section .personal-info input {
+        height: 25px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: 5px;
+}
+
+.links a {
+        color: #a4a400;
+}
